@@ -1,0 +1,212 @@
+:root {
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  color: #1d2430;
+  background:
+    radial-gradient(circle at top left, rgba(214, 150, 82, 0.22), transparent 24%),
+    linear-gradient(180deg, #f8efe6 0%, #f8efe6 38%, #eef3f8 38%, #eef3f8 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 34px 20px 70px;
+}
+
+.hero,
+.feature-strip,
+.content,
+.products,
+.review-list,
+.metric-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.hero {
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.75fr);
+  align-items: center;
+}
+
+.eyebrow,
+.card-label {
+  margin: 0 0 10px;
+  color: #9f6330;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 0.8rem;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.product-header h2,
+.feature-strip h3,
+.hero-card strong {
+  margin: 0;
+}
+
+.hero-copy h1 {
+  max-width: 11ch;
+  font-size: clamp(2.5rem, 4vw, 4.7rem);
+  line-height: 1.02;
+}
+
+.subtitle,
+.feature-strip p,
+.product-header p,
+.review-item p,
+.form-copy {
+  color: #5d6776;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+  align-items: center;
+}
+
+.hero-actions button,
+.review-form button {
+  border: none;
+  border-radius: 18px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #19395a, #3a5f84);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero-actions span {
+  color: #445162;
+}
+
+.hero-card,
+.feature-strip article,
+.product-card,
+.review-form {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(42, 57, 73, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 20px 42px rgba(37, 48, 66, 0.08);
+}
+
+.hero-card,
+.feature-strip article,
+.product-card,
+.review-form {
+  padding: 24px;
+}
+
+.metric-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.metric-grid article,
+.review-item {
+  padding: 16px;
+  border-radius: 20px;
+  background: #f7f4ef;
+}
+
+.metric-grid span,
+.rating-badge span {
+  display: block;
+  color: #677487;
+  font-size: 0.85rem;
+}
+
+.feature-strip,
+.content {
+  margin-top: 28px;
+}
+
+.feature-strip {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.content {
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.78fr);
+  align-items: start;
+}
+
+.section-heading {
+  margin-bottom: 6px;
+}
+
+.product-header,
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rating-badge {
+  min-width: 96px;
+  padding: 16px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fff6ea, #f0ebe4);
+  text-align: center;
+}
+
+.rating-badge strong {
+  display: block;
+  font-size: 1.6rem;
+  color: #173451;
+}
+
+.review-top span {
+  color: #c2872f;
+  letter-spacing: 0.08em;
+}
+
+.review-form select,
+.review-form textarea,
+.review-form button {
+  width: 100%;
+  margin-top: 14px;
+  border-radius: 18px;
+  border: 1px solid #d7dde4;
+  padding: 14px;
+}
+
+.review-form select,
+.review-form textarea {
+  background: #fbfcfd;
+}
+
+.review-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .feature-strip,
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .metric-grid,
+  .product-header {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
